@@ -1,26 +1,70 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <div 
+      v-for="obj in todos"
+      v-bind:key="obj.id"
+      class="todos-item"
+    >
+      {{ index }} - {{ obj.title }}
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  data() {
+    return {
+      todos: [
+        {
+          userId: 1,
+          id: 1,
+          title: 'delectus aut autem',
+          completed: false,
+        },
+        {
+          userId: 1,
+          id: 2,
+          title: 'quis ut nam facilis et officia qui',
+          completed: false,
+        },
+        {
+          userId: 1,
+          id: 3,
+          title: 'fugiat veniam minus',
+          completed: false,
+        },
+        {
+          userId: 1,
+          id: 4,
+          title: 'et porro tempora',
+          completed: true,
+        },
+        {
+          userId: 1,
+          id: 5,
+          title: 'laboriosam mollitia et enim quasi adipisci quia provident illum',
+          completed: false,
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style>
+.todos-item {
+  background-color: black;
+  margin: 0 0 5px 0;
+  padding: 3px 6px;
+  color: white;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #2c3e50;
+  margin: 60px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
