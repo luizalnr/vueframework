@@ -1,7 +1,8 @@
 <template>
     <div>
         <div>
-
+            Two-way data binding
+            <v-model></v-model>
         </div>
     </div>
 </template>
@@ -11,7 +12,7 @@ export default {
     name: 'App',
     data() {
         return {
-            
+             
         }
     }
 }
