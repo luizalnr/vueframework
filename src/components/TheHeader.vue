@@ -1,8 +1,12 @@
 <template>
     <div>
         <div>
-            Two-way data binding
-            <v-model></v-model>
+            <label>Nome</label>
+            <input
+                v-model="name"
+                type="text"
+            > <br>
+            {{ name }}
         </div>
     </div>
 </template>
@@ -12,7 +16,7 @@ export default {
     name: 'App',
     data() {
         return {
-             
+            name: 'jon snow'
         }
     }
 }
