@@ -1,13 +1,32 @@
 <template>
   <div>
-      <div>
-          <label>Nome</label>
-          <input
-              v-model="name"
-              type="text"
-          > <br>
-          {{ name }}
+
+
+      <button @click.once="onClick ">
+        Enviar
+      </button> 
+
+      <br><br>
+
+      <div
+        @mouseover="onMouseOver"
+        @mouseout ="onMouseOut"
+      >
+        Mouse Over
       </div>
+
+      <br><br>
+
+      <form 
+        action="https://google.com"
+        @submit="onSubmit"
+      >
+        <button type="submit">
+          Enviar
+        </button>
+      </form>
+
+
   </div>
 </template>
 
@@ -16,18 +35,37 @@ export default {
   name: 'App',
   data() {
       return {
-          name: 'jon snow'
+          
       }
+  },
+
+
+  methods: {
+    onClick($evt) {
+      console.log('click', $evt);
+    },
+    onMouseOver($evt) {
+      console.log('mouse over', $evt);
+    },
+    onMouseOut($evt) {
+      console.log('mouse out', $evt);
+    },
+    onSubmit() {
+      console.log('submit');
+    }
   }
+
+
 }
 </script>
 
 <style>
 #app {
   font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
+  text-align: left;
+  padding-left: 45%;
+  padding-top: 10%;
   color: #2c3e50;
-  margin-top: 60px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
