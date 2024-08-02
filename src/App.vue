@@ -1,60 +1,41 @@
 <template>
   <div>
-
-    <TheHeader />
-    <h1>Hello World</h1>  
-    {{ name }}
-
+    <BaseAlert 
+      variant="" 
+    /> 
   </div>
 </template>
 
 <script>
-import TheHeader from '@/components/TheHeader.vue';
+
+import BaseAlert from './components/BaseAlert.vue';
+
 export default {
   name: 'App',
-  components: { TheHeader },
+  components: { BaseAlert }, 
   data() {
       return {
-        name: 'lulu',
+        
       }
   },
+  beforeUpdate() {},
+  updated() {},
+  beforeCreate() {},
+  created() {},
+  beforeMount() {},
+  mounted() {},
 
-  
-//hooks
-beforeCreate(){
-  console.log('beforeCreate');
-  console.log('Estado:',this.name);
-  console.log('DOM:',this.$el);
-},
-created(){
-  console.log('created');
-  console.log('Estado:',this.name);
-  console.log('DOM:',this.$el);
-  
-},
-beforeMount(){
-  console.log('beforeMount');
-  console.log('Estado:',this.name);
-  console.log('DOM:',this.$el);
-  
-},
-mounted(){
-  console.log('mounted');
-  console.log('Estado:',this.name);
-  console.log('DOM:',this.$el);
-  
-},
-
+  watch: {},
+  computed: {},
+  methods: {}
 }
 </script>
 
 <style>
 #app {
   font-family: Arial, Helvetica, sans-serif;
-  text-align: left;
-  padding-left: 45%;
-  padding-top: 10%;
-  color: #2c3e50;
+  text-align: center;
+  padding: 150px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

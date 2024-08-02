@@ -1,29 +1,29 @@
 <template>
     <header class="Header">
-        Header
+        <h1 class="title"><slot name="title" /></h1>
+
+        <div class="description"><slot name="description" /></div>
+
+        <div class="content"><slot /></div>
+        
     </header>
 </template>
 
+
+
+
 <script>
 export default {
-    beforeUnmount(){
-        console.log('beforeUnmount');
-        console.log('Estado:',this.name);
-        console.log('DOM:',this.$el);
-  
-},
-    unmounted(){
-        console.log('unmounted');
-        console.log('Estado:',this.name);
-        console.log('DOM:',this.$el);
-    
-},
+     
 }
 </script>
 
+
+
+
 <style>
-    .header{
-        background-color: black;
-        color: white;
+    .Header{
+        background: #000;
+        color: #fff;
     }
 </style>
