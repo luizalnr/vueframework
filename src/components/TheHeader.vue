@@ -1,34 +1,29 @@
 <template>
-    <div>
-        <div>
-            <label>Nome</label>
-            <input
-                v-model="name"
-                type="text"
-            > <br>
-            {{ name }}
-        </div>
-    </div>
+    <header class="Header">
+        Header
+    </header>
 </template>
 
 <script>
 export default {
-    name: 'App',
-    data() {
-        return {
-            name: 'jon snow'
-        }
-    }
+    beforeUnmount(){
+        console.log('beforeUnmount');
+        console.log('Estado:',this.name);
+        console.log('DOM:',this.$el);
+  
+},
+    unmounted(){
+        console.log('unmounted');
+        console.log('Estado:',this.name);
+        console.log('DOM:',this.$el);
+    
+},
 }
 </script>
 
 <style>
-#app {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+    .header{
+        background-color: black;
+        color: white;
+    }
 </style>
