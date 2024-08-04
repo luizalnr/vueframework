@@ -1,5 +1,4 @@
 import { createApp } from 'vue';
-import App from './App.vue';
-import './assets/css/style.css'
+import ParentComponent from './components/ParentComponent.vue';
 
-createApp(App).mount('#app');
+createApp(ParentComponent).mount('#app');
